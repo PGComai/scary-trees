@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bq72ffnxnvoa5"]
+
+[ext_resource type="Texture2D" uid="uid://bkn78v5a76w4i" path="res://vines.tres" id="1_ovga7"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_haacf"]
+fractal_type = 2
+domain_warp_type = 1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7e8ks"]
+seamless = true
+as_normal_map = true
+bump_strength = 6.5
+noise = SubResource("FastNoiseLite_haacf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubb5d"]
+albedo_color = Color(0.219608, 0.211765, 0.129412, 1)
+albedo_texture = ExtResource("1_ovga7")
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_7e8ks")
+uv1_scale = Vector3(20, 20, 20)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_220ar"]
+material = SubResource("StandardMaterial3D_ubb5d")
+size = Vector2(500, 500)
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.122874, 0)
+mesh = SubResource("PlaneMesh_220ar")

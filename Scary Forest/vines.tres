@@ -1,0 +1,9 @@
+[gd_resource type="NoiseTexture2D" load_steps=2 format=3 uid="uid://bkn78v5a76w4i"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_h2dhr"]
+fractal_type = 2
+domain_warp_type = 1
+
+[resource]
+seamless = true
+noise = SubResource("FastNoiseLite_h2dhr")

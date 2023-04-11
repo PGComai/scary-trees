@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw2egpjwx0xto"]
+
+[ext_resource type="Script" path="res://new_tree.gd" id="1_i135o"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r6gk6"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2.00001, 1e-05, 2),
+"format": 1,
+"primitive": 0,
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 243, 4, 53, 63, 0, 0, 0, 0, 243, 4, 53, 63, 0, 48, 141, 36, 0, 0, 0, 0, 0, 0, 128, 63, 243, 4, 53, 191, 0, 0, 0, 0, 243, 4, 53, 63, 0, 0, 128, 191, 0, 0, 0, 0, 0, 48, 13, 37, 243, 4, 53, 191, 0, 0, 0, 0, 243, 4, 53, 191, 0, 200, 83, 165, 0, 0, 0, 0, 0, 0, 128, 191, 243, 4, 53, 63, 0, 0, 0, 0, 243, 4, 53, 191)
+}]
+
+[node name="NewTree" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_r6gk6")
+script = ExtResource("1_i135o")
